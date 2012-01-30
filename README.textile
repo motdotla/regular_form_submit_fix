@@ -1,0 +1,19 @@
+h1. Get form submit fix for sammy js
+
+p. Sammy.js wants to intercept your GET form submits. This prevents sammy.js from doing that.
+
+h2. Usage
+
+1. Include the file in the head of your document.
+
+<code>
+  <script src="/javascripts/plugins/sammy.regular_form_submit_fix.js" type="text/javascript"></script>
+</code>
+
+2. Include the plugin in your sammy app.
+
+<code>
+  var app = Sammy('body', function() {
+    this.use(RegularFormSubmitFix);
+    ..
+</code>
