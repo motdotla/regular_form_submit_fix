@@ -5,5 +5,7 @@ RegularFormSubmitFix = (app) ->
     $form = $(form)
     path  = $form.attr("action")
     verb  = @_getFormVerb($form)
-    return true if verb is "get" and path[0] isnt "#"
-    @defaultCheckFormSubmission form
+    if verb is "get" and path[0] isnt "#"
+      true
+    else
+      @defaultCheckFormSubmission form
